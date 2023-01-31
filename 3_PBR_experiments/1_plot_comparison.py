@@ -7,6 +7,9 @@ import numpy as np
 """This file plots the experiment comparison data. The data logged during the experiment was  pre-processed 
 (not in this script) to correct the H2 signal for cross sensitivity to CO and CO2. 
 This is important for analysing the co-feeding. A background signal of 0.15% H2 was also removed from the data.
+This backround signal was present when flowing pure argon though the system, and was typically in the the range 0.13-0.17. 
+We bypassed devices one by one and it was identified to be coming from the condensor, 
+which for fully dry gas must be adding a small amount of humidity.
 """
 
 filename = "comparison_experimental_dataset.csv"

@@ -17,7 +17,7 @@ reactions in countercurrent streams"""
 # set the process condtions
 p = 100000 # Pa
 T = 1073   # K
-nH2 = 2.0  # H2/CO2
+nH2 = 1.5  # H2/CO2
 R = 8.314  # ideal gas constant
 
 # get oxygen chemical potential at the reference pressure 1 bar
@@ -46,7 +46,7 @@ X_CO2 = np.arange(0, 1.004, 0.004)
 for x in X_CO2:
     # iterates through CO2 conversion until partial pressures of the half reactions match
     CO2.X = {'CO': 1, 'O2': 0.5 - x/2}
-    H2O.X = {'H2': 2.0, 'O2': x/2}
+    H2O.X = {'H2': nH2, 'O2': x/2}
     CO2.TP = T, p
     H2O.TP = T, p
     CO2.equilibrate('TP')
@@ -99,13 +99,14 @@ ax.text(X.max()+0.01, -280.0, '$X_\mathrm{eq}$', color = 'grey')
 # add some labels to the graph
 ax.text(X[10]+0.01, mu_O_CO2[10], labels[0], color = C1)
 ax.text(X[10]+0.04, mu_O_H2O[10], labels[1], color = C2)
-ax.text(0.65, -220, '$T = 1073 \, \mathrm{K}$' + '\n' + '$\mathrm{H_2/CO_2} = 1.5$ ', color ="black")
+ax.text(0.65, -220, '$T =$ '+ str(T) + ' $\, \mathrm{K}$' + '\n'
+        + '$\mathrm{H_2/CO_2} =$ ' + str(nH2), color ="black")
 
 ax.set_xlim(0,1)
 ax.set_ylim(-300,-200)
 plt.tight_layout()
-plt.savefig(os.path.join('plots','figure_1b.png'), dpi=400, bbox_inches='tight')
-plt.savefig(os.path.join('plots','figure_1b.pdf'), bbox_inches='tight')
+plt.savefig(os.path.join('plots','figure_2b.png'), dpi=400, bbox_inches='tight')
+plt.savefig(os.path.join('plots','figure_2b.pdf'), bbox_inches='tight')
 plt.show()
 
 
@@ -118,7 +119,7 @@ X_CO2 = np.arange(0, 1.004, 0.004)
 for x in X_CO2:
     # iterates through CO2 conversion until partial pressures of the half reactions match
     CO2.X = {'CO': 1, 'O2': 0.5 - x/2}
-    H2O.X = {'H2': 2.0, 'O2': x/2}
+    H2O.X = {'H2': nH2, 'O2': x/2}
     CO2.TP = T, p
     H2O.TP = T, p
     CO2.equilibrate('TP')
@@ -177,13 +178,14 @@ ax.text(X[40]-0.05, (mu_O_CO2[40]+mu_O_H2O[40])/2.0 -1, '$\mathrm{O}$', color = 
 # add labels
 ax.text(X[10]+0.01, mu_O_CO2[10], labels[0], color = C1)
 ax.text(X[240]-0.09, mu_O_H2O[240], labels[1], color = C2)
-ax.text(0.65, -220, '$T = 1073 \, \mathrm{K}$' + '\n' + '$\mathrm{H_2/CO_2} = 1.5$ ', color ="black")
+ax.text(0.65, -220, '$T =$ '+ str(T) + ' $\, \mathrm{K}$' + '\n'
+        + '$\mathrm{H_2/CO_2} =$ ' + str(nH2), color ="black")
 
 ax.set_xlim(0,1)
 ax.set_ylim(-300,-200)
 plt.tight_layout()
-plt.savefig(os.path.join('plots','figure_1e.png'), dpi=400, bbox_inches='tight')
-plt.savefig(os.path.join('plots','figure_1e.pdf'), bbox_inches='tight')
+plt.savefig(os.path.join('plots','figure_2e.png'), dpi=400, bbox_inches='tight')
+plt.savefig(os.path.join('plots','figure_2e.pdf'), bbox_inches='tight')
 plt.show()
 
 
@@ -221,6 +223,6 @@ ax.text(0.13, -250, '$T = 1073 \, \mathrm{K}$' + '\n' + '$\mathrm{CeO}_{2-\delta
 ax.set_xlim(-0.001,0.2)
 ax.set_ylim(-400,-200)
 plt.tight_layout()
-plt.savefig(os.path.join('plots','mu_O_vs_delta.png'), dpi=400, bbox_inches='tight')
-plt.savefig(os.path.join('plots','mu_O_vs_delta.pdf'), bbox_inches='tight')
+plt.savefig(os.path.join('plots','mu_O_vs_delta_CeO2.png'), dpi=400, bbox_inches='tight')
+plt.savefig(os.path.join('plots','mu_O_vs_delta_CeO2.pdf'), bbox_inches='tight')
 plt.show()

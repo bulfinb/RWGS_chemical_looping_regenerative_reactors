@@ -1,8 +1,11 @@
 #!/usr/bin/env python
 import pandas as pd
 import os
+import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib as mpl
 
+mpl.rcParams['axes.prop_cycle'] = mpl.cycler(color= plt.cm.viridis(np.linspace(0, 1, 7)))
 
 filename1 = os.path.join("exported_data","RWGS_demo_CeO2_cycle1_CO2-flow_d_vs_x.txt")
 filename2 = os.path.join("exported_data","RWGS_demo_CeO2_cycle1_CO2-flow_xCO_vs_x.txt")
@@ -17,7 +20,7 @@ data2 = pd.read_csv(filename2, delim_whitespace = True, names=collumn_names, ski
 data3 = pd.read_csv(filename3, delim_whitespace = True, names=collumn_names, skiprows =8)
 
 
-filename4 = os.path.join("exported_data","RWGS_demo_CeO2_cycle1_CO2-flow_xCO_out_vs_t.txt"
+filename4 = os.path.join("exported_data","RWGS_demo_CeO2_cycle1_CO2-flow_xCO_out_vs_t.txt")
 data4 = pd.read_csv(filename4, delim_whitespace = True, names=['t','X_H2O'], skiprows =8)
 
 # plot the results of conversion vs. T

@@ -1,7 +1,11 @@
 #!/usr/bin/env python
 import pandas as pd
 import os
+import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib as mpl
+
+mpl.rcParams['axes.prop_cycle'] = mpl.cycler(color= plt.cm.viridis(np.linspace(0, 1, 7)))
 
 
 filename1 = os.path.join("exported_data","RWGS_demo_CeO2_cycle2_CO2-flow_d_vs_x.txt")
@@ -44,8 +48,8 @@ for i, y_col in enumerate(y_cols):
     ax.plot(data1['x0'].array, data1[y_col], lw=1.4, label = y_col)
 plt.legend()
 plt.tight_layout()
-plt.savefig(os.path.join('plots', 'figure_2e.png'), dpi=400, bbox_inches='tight')
-plt.savefig(os.path.join('plots', 'figure_2e.pdf'), bbox_inches='tight')
+plt.savefig(os.path.join('plots', 'figure_3e.png'), dpi=400, bbox_inches='tight')
+plt.savefig(os.path.join('plots', 'figure_3e.pdf'), bbox_inches='tight')
 plt.show()
 
 # plot the results of conversion vs. T
@@ -115,8 +119,8 @@ for i, y_col in enumerate(y_cols):
                  color = 'dimgrey', lw = 0.0, marker = 's')
 #plt.legend()
 plt.tight_layout()
-plt.savefig(os.path.join('plots', 'figure_2f.png'), dpi=400)
-plt.savefig(os.path.join('plots', 'figure_2f.pdf'))
+plt.savefig(os.path.join('plots', 'figure_3f.png'), dpi=400)
+plt.savefig(os.path.join('plots', 'figure_3f.pdf'))
 plt.show()
 
 xaxislabel = '$\delta$ [-]'
@@ -134,6 +138,6 @@ ax.plot(data5['delta'], data5['X_H2O'], color = 'dimgrey', lw=1.4)
 #add markers at the time stamps
 #plt.legend()
 plt.tight_layout()
-plt.savefig(os.path.join('plots', 'figure_2d.png'), dpi=400)
+plt.savefig(os.path.join('plots', 'figure_3d.png'), dpi=400)
 
 plt.show()

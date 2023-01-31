@@ -1,7 +1,12 @@
 #!/usr/bin/env python
 import pandas as pd
 import os
+import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib as mpl
+
+mpl.rcParams['axes.prop_cycle'] = mpl.cycler(color= plt.cm.viridis(np.linspace(0, 1, 8)))
+
 
 
 filename1 = os.path.join("exported_data","RWGS_demo_CeO2_cycle1_H2-flow_d_vs_x.txt")

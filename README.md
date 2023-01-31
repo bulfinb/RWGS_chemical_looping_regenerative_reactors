@@ -1,5 +1,5 @@
 # Reverse water-gas-shift countercurrent chemical looping 
-[Note: Add doi with link to paper and citation when accepted]
+[Note: Add doi with link and citation when accepted]
 
 ## 1 Ideal countercurrent RWGS
 This folder includes the code used for modelling of thermodynamic limits for conventional catalytic reverse water-gas-shift and countercurrent membrane reverse water-gas-shift. There are individual python files or a Jupyter notebook with comments.

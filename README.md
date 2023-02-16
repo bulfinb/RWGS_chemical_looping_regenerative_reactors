@@ -3,7 +3,7 @@ This repository contains the modelling and experimental data from my research pa
 
 B. Bulfin, M. Zuber, O. Gräub, A. Steinfeld,
 Intensification of the reverse water-gas shift process using a countercurrent chemical looping regenerative reactor,
-Chemical Engineering Journal, 2023, 141896, ISSN 1385-8947
+*Chemical Engineering Journal*, 2023, 141896, ISSN 1385-8947
 
 ## 1 Ideal countercurrent RWGS
 This folder includes the code used for modelling of thermodynamic limits for conventional catalytic reverse water-gas-shift and countercurrent membrane reverse water-gas-shift as seen in figure 2 of the manuscript. There are individual python files or a Jupyter notebook with comments.

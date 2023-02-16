@@ -1,5 +1,6 @@
 # Reverse water-gas-shift countercurrent chemical looping 
 This repository contains the modelling and experimental data from my research paper in the Chemical Engineering Journal, DOI: [10.1016/j.cej.2023.141896](https://doi.org/10.1016/j.cej.2023.141896)
+
 B. Bulfin, M. Zuber, O. Gräub, A. Steinfeld,
 Intensification of the reverse water-gas shift process using a countercurrent chemical looping regenerative reactor,
 Chemical Engineering Journal, 2023, 141896, ISSN 1385-8947
